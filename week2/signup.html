@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1 class="title">facebook</h1>
+<div class="box">
+    <main class="dialog">
+        <div class="dialog">
+            <h1>Create a new account</h1>
+            <p>It's quick and easy.</p>
+        </div>
+        <hr>
+        <form class="dialog">
+            <div class="form-group-dialog" style="display: inline-block">
+                <input type="text" class="firstname" placeholder="First Name">
+                <input type="text" class="surname" placeholder="Sur Name">
+            </div>
+            <div class="form-group-dialog">
+                <input type="email" placeholder="Mobile number or email address">
+            </div>
+            <div class="form-group-dialog">
+                <input type="password" placeholder="New password">
+            </div>
+            <div class="form-group-dialog">
+                <label>Date of birth</label>
+                <div class="birthday-inputs">
+                    <select name="birthday_day" id="birthday_day" required>
+                    </select>
+                    <select name="birthday_month" id="birthday_month" required>
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                    <select name="birthday_year" id="birthday_year" required>
+                    </select>
+                </div>
+            </div>
+            <div class="gender-group">
+                <span>Giới tính</span>
+                <div class="gender-options">
+                    <div style="width: 30%;">
+                        <label for="gender_male">Male</label>
+                        <input type="radio" value="male">
+                    </div>
+                    <div style="width: 30%">
+                        <label for="gender_female">Female</label>
+                        <input type="radio" value="female">
+                    </div>
+                    <div style="width: 40%">
+                        <label for="gender_custom">Custom</label>
+                        <input type="radio" value="custom">
+                    </div>
+                </div>
+                <span class="policy" style="font-size: 13px">
+                    People who use our service may have uploaded your contact information to Facebook
+                    <a href="#">Learn more.</a> </span>
+                <span class="policy" style="font-size: 13px">
+                    By clicking Sign Up, you agree to our 
+                    <a href="#">Term</a>, 
+                    <a href="#">Private Policy</a> và 
+                    <a href="#">Cookies Policy</a> . You may receive SMS notifications from us and can opt out at any time.</span>
+            </div>
+            <button class="button-dialog" type="submit">Sign up</button>
+            <div class="account-already">
+                <a href="#">Already have an account?</a>
+            </div>
+        </form>
+    </main>
+</div>
+
+<script>
+    let days = document.getElementById("birthday_day");
+    let years = document.getElementById("birthday_year");
+
+    for (let i = 1; i <= 31; i++) {
+        let option = document.createElement("option");
+        option.text = i.toString();
+        days.add(option);
+    }
+
+    for (let i = 2023; i >= 1900; i--) {
+        let option = document.createElement("option");
+        option.text = i.toString();
+        years.add(option);
+    }
+</script>
+
+</body>
+</html>
+
