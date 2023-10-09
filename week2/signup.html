@@ -1,7 +1,191 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #ebedef;
+            font-family: Arial;
+        }
+
+        .box {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title {
+            text-align: center;
+            color: #006eff;
+            font-size: 60px;
+            margin-bottom: auto;
+            margin-top: auto;
+        }
+
+        main.dialog {
+            width: 500px;
+            margin: 10px auto;
+            border-radius: 2%;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        div.dialog {
+            text-align: center;
+        }
+
+        div.dialog h1 {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        div.dialog p {
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #7f7474;
+        }
+
+        hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: #656363;
+        }
+
+        form.dialog {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .firstname {
+            float: left;
+            width: 44%; 
+        }
+
+        .surname {
+            float: right;
+            width: 44%; 
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+
+        .form input {
+            padding: 10px;
+            font-size: 15px;
+            border: 1px solid #d6d5d5;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .form label {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .birthday {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .birthday select {
+            padding: 10px;
+            border: 1px solid #d6d5d5;
+            border-radius: 5px;
+            background-color: #ffffff;
+            font-size: 14px;
+            margin-right: 10px;
+            width: 33%;
+        }
+
+        .gender {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 5px;
+        }
+
+        .gender span {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .gender-options {
+            display: flex;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+
+        .gender-options div {
+            margin-right: 10px;
+            background-color: #fff;
+            border: 1px solid #d6d5d5;
+            border-radius: 5px;
+            outline: none;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .gender-options label {
+            font-size: 16px;
+            margin-left: 10px;
+        }
+
+        .gender-options input {
+            margin-right: 10px;
+        }
+
+        .policy {
+            margin-top: 10px;
+            color: dimgray;
+        }
+
+        .policy a {
+            color: #166fe5;
+            text-decoration: none;
+        }
+
+        .policy a:hover {
+            text-decoration: underline;
+        }
+
+        button.signup-btn {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #fff;
+            text-decoration: none;
+            background: #36a420;
+            display: inline-block;
+            width: 40%;
+            cursor: pointer;
+        }
+
+        button.signup-btn:hover {
+            background: #32971e;
+        }
+
+        .account-already {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .account-already a {
+            text-decoration: none;
+            color: #0570fb;
+        }
+    </style>
 </head>
 <body>
 <h1 class="title">facebook</h1>
@@ -13,22 +197,22 @@
         </div>
         <hr>
         <form class="dialog">
-            <div class="form-group-dialog" style="display: inline-block">
+            <div class="form" style="display: inline-block">
                 <input type="text" class="firstname" placeholder="First Name">
                 <input type="text" class="surname" placeholder="Sur Name">
             </div>
-            <div class="form-group-dialog">
+            <div class="form">
                 <input type="email" placeholder="Mobile number or email address">
             </div>
-            <div class="form-group-dialog">
+            <div class="form">
                 <input type="password" placeholder="New password">
             </div>
-            <div class="form-group-dialog">
+            <div class="form">
                 <label>Date of birth</label>
-                <div class="birthday-inputs">
-                    <select name="birthday_day" id="birthday_day" required>
+                <div class="birthday">
+                    <select name="birthday-day" id="birthday-day" required>
                     </select>
-                    <select name="birthday_month" id="birthday_month" required>
+                    <select name="birthday-month" id="birthday-month" required>
                         <option value="01">January</option>
                         <option value="02">February</option>
                         <option value="03">March</option>
@@ -42,23 +226,23 @@
                         <option value="11">November</option>
                         <option value="12">December</option>
                     </select>
-                    <select name="birthday_year" id="birthday_year" required>
+                    <select name="birthday-year" id="birthday-year" required>
                     </select>
                 </div>
             </div>
-            <div class="gender-group">
+            <div class="gender">
                 <span>Giới tính</span>
                 <div class="gender-options">
                     <div style="width: 30%;">
-                        <label for="gender_male">Male</label>
+                        <label>Male</label>
                         <input type="radio" value="male">
                     </div>
                     <div style="width: 30%">
-                        <label for="gender_female">Female</label>
+                        <label>Female</label>
                         <input type="radio" value="female">
                     </div>
                     <div style="width: 40%">
-                        <label for="gender_custom">Custom</label>
+                        <label>Custom</label>
                         <input type="radio" value="custom">
                     </div>
                 </div>
@@ -71,7 +255,7 @@
                     <a href="#">Private Policy</a> và 
                     <a href="#">Cookies Policy</a> . You may receive SMS notifications from us and can opt out at any time.</span>
             </div>
-            <button class="button-dialog" type="submit">Sign up</button>
+            <button class="signup-btn" type="submit">Sign up</button>
             <div class="account-already">
                 <a href="#">Already have an account?</a>
             </div>
@@ -80,8 +264,8 @@
 </div>
 
 <script>
-    let days = document.getElementById("birthday_day");
-    let years = document.getElementById("birthday_year");
+    let days = document.getElementById("birthday-day");
+    let years = document.getElementById("birthday-year");
 
     for (let i = 1; i <= 31; i++) {
         let option = document.createElement("option");

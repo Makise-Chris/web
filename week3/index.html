@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Tiến Nam - 20194337</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --main-gray: #303841;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            line-height: 1.4;
+            font-size: 1.5rem;
+            color: #f0f0f0;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background-color: lightblue;
+            }
+        }
+
+        #navbar {
+            display: flex;
+            justify-content: flex-end;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #be3144;
+        }
+
+        nav ul {
+            display: flex;
+            margin-right: 2rem;
+            list-style: none;
+            justify-content: right;
+        }
+
+        nav ul li a {
+            display: block;
+            font-size: 1.6rem;
+            padding: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: #f0f0f0;
+        }
+
+        #welcome-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-color: #000;
+            background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+        }
+
+        #welcome-section h1 {
+            font-size: 6rem;
+        }
+
+        #welcome-section > p {
+            font-size: 3rem;
+            font-weight: 200;
+            font-style: italic;
+            color: #be3144;
+        }
+
+        .projects-section {
+            text-align: center;
+            padding: 10rem 2rem;
+            background: #45567d;
+        }
+
+        .projects-section-header {
+            max-width: 700px;
+            margin: 0 auto 6rem auto;
+            border-bottom: 0.2rem solid #f0f0f0;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-gap: 4rem;
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            margin-bottom: 6rem;
+        }
+
+        .project-tile {
+            background: #303841;
+            border-radius: 2px;
+        }
+
+        .project-image {
+            height: calc(100% - 6.8rem);
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            padding: 2rem 0.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 2px;
+        }
+
+        .btn-show-all {
+            font-size: 2rem;
+            background: #303841;
+            transition: transform 0.3s ease-out;
+            color: #f0f0f0;
+        }
+
+        .btn-show-all:hover {
+            background: #be3144;
+            cursor: pointer;
+        }
+
+        .contact-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 80vh;
+            padding: 0 2rem;
+            background: #303841;
+        }
+
+        .contact-section-header > h2 {
+            font-size: 4rem;
+        }
+
+        .contact-section-header > p {
+            font-style: italic;
+        }
+
+        .contact-section-methods {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-detail {
+            font-size: 1.8rem;
+        }
+
+        footer {
+            font-weight: 300;
+            display: flex;
+            justify-content: space-around;
+            padding: 2rem;
+            background: #303841;
+            border-top: 4px solid #be3144;
+        }
+
+        footer > p {
+            margin: 2rem;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li>
+                <a href="#" id="profile-link" target="_blank">About</a>
+            </li>
+            <li>
+                <a href="#">Work</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <section id="welcome-section">
+        <h1>Hi I am Nam NT</h1>
+        <p>a web developer</p>
+    </section>
+    <section class="projects-section" id="projects">
+        <h2 class="projects-section-header">These are some of my projects</h2>
+        <div class="projects">
+            <a class="project-tile" href="">
+                <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"/>
+                <p class="project-title">Tribute Page</p>
+            </a>
+            <a class="project-tile" href="">
+                <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png"/>
+                <p class="project-title">Random Quote Machine</p>
+            </a>
+            <a class="project-tile" href="">
+                <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png"/>
+                <p class="project-title">JavaScript Calculator</p>
+            </a>
+            <a class="project-tile" href="">
+                <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg"/>
+                <p class="project-title">Map Data Across the Globe</p>
+            </a>
+            <a class="project-tile" href="">
+                <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/wiki.png"/>
+                <p class="project-title">Wikipedia Viewer</p>
+            </a>
+            <a class="project-tile" href="">
+                <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tic-tac-toe.png"/>
+                <p class="project-title">Tic tac toe Game</p>
+            </a>
+        </div>
+        <button class="btn btn-show-all">
+            Show all
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </section>
+    <section class="contact-section" id="contact">
+        <div class="contact-section-header">
+            <h2>Let's work together...</h2>
+            <p>How do you take your coffee?</p>
+        </div>
+        <div class="contact-section-methods">
+            <a class="btn contact-detail" href="">
+                <i class="fab fa-facebook-square"></i>
+                Facebook
+            </a>
+            <a class="btn contact-detail" href="">
+                <i class="fab fa-github"></i>
+                Github
+            </a>
+            <a class="btn contact-detail" href="">
+                <i class="fas fa-at"></i>
+                Send a mail
+            </a>
+            <a class="btn contact-detail" href="">
+                <i class="fas fa-mobile-alt"></i>
+                Call me
+            </a>
+        </div>
+    </section>
+    <footer>
+        <p>**This is just a fake portfolio. All the projects and contact details given are not real.</p>
+        <p>
+            © Created by Nam NT
+        </p>
+    </footer>
+</body>
+</html>
